@@ -13,6 +13,11 @@ A full-stack web application to manage student admissions and records, built usi
 - 📁 Secure Document Upload with Cloudinary
 - 📱 Responsive UI for Mobile, Tablet, and Desktop
 
+## 🚀 Deployment
+
+This project is live on Render:  
+👉 [https://student-management-system-mb59.onrender.com]
+
 ## 🛠️ Tech Stack
 
 **Frontend:** HTML, CSS, Bootstrap, JavaScript  
@@ -20,10 +25,6 @@ A full-stack web application to manage student admissions and records, built usi
 **Database:** MongoDB (via MongoDB Atlas)  
 **Cloud Storage:** Cloudinary  
 **Authentication:** Cookies and Sessions
-
-## 📸 Screenshots
-
-> (Insert images/gifs of the login page, dashboard, and other features here)
 
 ## ⚙️ Getting Started
 
