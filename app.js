@@ -1,3 +1,4 @@
+require('dotenv').config(); // again, at the top (best practice)
 const express = require('express')   //require = all express things will come into express
 const app = express()
 const port = 4000

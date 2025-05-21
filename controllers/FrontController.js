@@ -11,9 +11,9 @@ const ContactModel = require('../models/contact')
 
 // Configuration
 cloudinary.config({
-    cloud_name: "dwhu0gj91",
-    api_key: "129335176667175",
-    api_secret: "a6_UH_UZjeoMLjcSKfFOJHQn66g" // Click 'View Credentials' below to copy your API secret
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.CLOUD_API_KEY,
+    api_secret: process.env.CLOUD_API_SECRET // Click 'View Credentials' below to copy your API secret
 });
 
 // function - methods 
@@ -101,7 +101,7 @@ class FrontController {
                         const userdata = await result.save()
                         // console.log(userdata)
                         if (userdata) {
-                            const token = jwt.sign({ ID: userdata._id }, "pninfosys123")
+                            const token = jwt.sign({ ID: userdata._id }, process.env.JWT_SECRET)
                             // console.log(token)
                             res.cookie("token", token)
                             this.sendVerifymail(n, e, userdata._id)
@@ -140,12 +140,12 @@ class FrontController {
                     // token
                     // multiple login i.e- Admin and Student
                     if (user.role == "admin" && user.is_verified == 1) {
-                        const token = jwt.sign({ ID: user._id }, 'pninfosys123');
+                        const token = jwt.sign({ ID: user._id }, process.env.JWT_SECRET);
                         // console.log(token)
                         res.cookie('token', token)
                         res.redirect('/home')
                     } else if (user.role == "student" && user.is_verified == 1) {
-                        const token = jwt.sign({ ID: user._id }, 'pninfosys123');
+                        const token = jwt.sign({ ID: user._id }, process.env.JWT_SECRET);
                         // console.log(token)
                         res.cookie('token', token)
                         res.redirect('/home')
@@ -274,8 +274,8 @@ class FrontController {
             port: 587,
 
             auth: {
-                user: "Satyammishra99266@gmail.com",
-                pass: "fphohvtnnwjnqigw",
+                user: process.env.EMAIL,
+                pass: process.env.PASSWORD,
             },
         });
         let info = await transporter.sendMail({
@@ -288,7 +288,7 @@ class FrontController {
                 name +
                 ', Please click here to <a href="http://localhost:4000/verify?id=' +
                 user_id +
-                '">Verify</a> your registeration.</p>',
+                '">Verify</a> your email.</p>',
         });
         //console.log(info);
     };
@@ -337,8 +337,8 @@ class FrontController {
             port: 587,
 
             auth: {
-                user: "Satyammishra99266@gmail.com",
-                pass: "fphohvtnnwjnqigw",
+                user: process.env.EMAIL,
+                pass: process.env.PASSWORD,
             },
         });
         let info = await transporter.sendMail({
