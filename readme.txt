@@ -1,18 +1,39 @@
-📌📌 THIS IS A BASIC SETUP FOR EVERY PROJECT SO SAVE A COPY OF THIS BASIC SETUP 📌📌
+# 🎓 Student Management System
 
+A full-stack web application to manage student admissions and records, built using the MERN (MongoDB, Express.js, React, Node.js) stack.
 
-create folders - controller, db, models, public, views ✅
-install package.json - npm init - npm(node package manager), node should be installed first✅
-npm i express - for installing express.js ✅
+## 🚀 Features
 
+- 🎯 Login and Registration for Students
+- 🧾 Secure Session Management using Cookies
+- 📋 Student Application Submission
+- 🔎 Advanced Search and Filter Options
+- 📩 Email Notifications for Application Updates
+- 📈 Real-time Analytics for Admins
+- 📁 Secure Document Upload with Cloudinary
+- 📱 Responsive UI for Mobile, Tablet, and Desktop
 
+## 🛠️ Tech Stack
 
-Project is worked on 3  MVC (Model View Controller)
-1. models - 
-2. views - html, css designing
-3. controller - backend 
-4. public - image, css
+**Frontend:** HTML, CSS, Bootstrap, JavaScript  
+**Backend:** Node.js, Express.js  
+**Database:** MongoDB (via MongoDB Atlas)  
+**Cloud Storage:** Cloudinary  
+**Authentication:** Cookies and Sessions
 
+## 📸 Screenshots
 
-db - database connectivity is done by mongoose - mongoDB
-model = collection of database in mongoDB
+> (Insert images/gifs of the login page, dashboard, and other features here)
+
+## ⚙️ Getting Started
+
+### Prerequisites
+- Node.js & npm
+- MongoDB Atlas Account
+
+### Installation
+
+```bash
+git clone https://github.com/Satyammishraaaa/Student-Management-System.git
+cd Student-Management-System
+npm install
